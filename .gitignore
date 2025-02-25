@@ -1,0 +1,9 @@
+__pycache__/
+*.log
+*.json
+client_secrets.json
+logs/
+reports/
+streamlit_dashboard/__pycache__/
+.DS_Store
+.env

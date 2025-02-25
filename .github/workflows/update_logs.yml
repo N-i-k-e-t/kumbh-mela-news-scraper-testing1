@@ -1,0 +1,33 @@
+name: Auto-Update Logs
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # Runs every 5 minutes
+  workflow_dispatch:  # Allows manual execution
+
+jobs:
+  update-logs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.9'
+
+      - name: Install Dependencies
+        run: |
+          pip install requests pydrive
+
+      - name: Run Log Updater
+        run: python scripts/utils/logger.py
+
+      - name: Commit & Push Logs
+        run: |
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git add logs/logs.json
+          git commit -m "🔄 Auto-update logs.json [GitHub Actions]" || echo "No changes t

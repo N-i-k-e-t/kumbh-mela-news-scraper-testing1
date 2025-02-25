@@ -1,0 +1,11 @@
+streamlit==1.17
+requests
+pydrive
+tavily-python
+typing-extensions
+pydantic
+scripts
+altair
+
+#pip uninstall streamlit altair -y
+#pip install streamlit altair
