@@ -31,5 +31,4 @@ jobs:
           git config --global user.email "github-actions@github.com"
           git config --global user.name "GitHub Actions"
           git add logs/logs.json
-          git commit -m "🔄 Auto-update logs.json [GitHub Actions]" || echo "No changes to commit"
-          git push https://x-access-token:${{ secrets.sample test }}@github.com/N-i-k-e-t/kumbh-mela-news-scraper-testing1.git main
+          git commit -m "🔄 Auto-update logs.json [GitHub Actions]" || echo "No changes t
