@@ -1,11 +1,14 @@
-streamlit==1.17
+streamlit==1.42.2
+altair==4.2.2 # Compatible with Streamlit
 requests
 pydrive
 tavily-python
 typing-extensions
 pydantic
-scripts
-altair
+scripts 
+streamlit
+#pip install -r requirements.txt
+#running
+#streamlit run streamlit_dashboard/app.py
 
-#pip uninstall streamlit altair -y
-#pip install streamlit altair
+#fixes pip install --no-cache-dir streamlit
